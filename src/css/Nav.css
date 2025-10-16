@@ -1,0 +1,114 @@
+.container__nav {
+    position: static; 
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+
+.hamburger-menu-btn {
+    transform: translateY(-45px);
+    place-self: end;
+    padding: .5rem;
+    transition: all 0.2s;
+    background: none;
+    border: none;
+}
+
+
+.hamburger-menu-btn:hover {
+  background: rgba(148, 148, 148, 0.147);
+}
+
+
+/* SUPPLEMENTARY LINKS - hidden beneath kebab menu */
+
+.supple-links {
+  display: none;             
+  position: absolute; 
+  right: 1rem; 
+  top: 3.25rem;
+  background: #fff; 
+  border: 1px solid #eee; 
+  border-radius: .5rem;
+  padding: .5rem; 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.108);
+}
+
+
+.supple-links a {
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  padding: .5rem; 
+  font-size: 1.25rem;
+  color: var(--primary);
+  transition: all 0.2s;
+}
+
+
+.supple-links a:hover {
+    background: var(--teritary);
+    color: var(--bg);
+    border-radius: 999px;
+}
+
+
+.supple-links.is-open { 
+    display: flex; 
+    gap: .25rem; 
+}
+
+
+.links__nav a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+
+.links__nav a:hover {
+    color: var(--secondary);
+}
+
+
+.links__nav {
+    display: flex; display: none;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.title__nav {
+    color: var(--primary);
+    display: flex; /* forces a flex layout */
+    place-items: center; /* centers items */
+    justify-content: space-between; /* substantial spacing */
+    gap: 2rem;
+    padding: .65rem 1rem; /* breathing room */
+}
+
+
+.title-text {
+    background: var(--secondary);
+    background-clip: none;
+    -webkit-background-clip: none;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    padding: .25rem;
+    width: 100%;
+    max-width: 75px;
+    border-radius: 10px;
+}
+
+
+@media (min-width: 768px) {
+    .links__nav { 
+        display: flex; 
+    }
+    .hamburger-menu-btn { 
+        display: none; 
+    }
+    .supple-links { 
+        display: none !important; 
+    }
+}
