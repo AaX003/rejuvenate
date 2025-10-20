@@ -1,114 +1,114 @@
-.container__nav {
-    position: static; 
-    top: 0;
-    background: #fff;
-    border-bottom: 1px solid #eee;
+/* =========================
+   Rejuvenate — Nav.css
+   ========================= */
+
+:root{
+  --bg-cream: #fff7f2;
+  --bg-white: #ffffff;
+  --pink: #ff6fa3;
+  --ink: #2e2a28;
+  --muted: #6b6461;
+  --glass: rgba(255,255,255,.7);
+  --bd: rgba(0,0,0,.08);
+  --radius: 14px;
+  --shadow: 0 10px 24px rgba(0,0,0,.06);
 }
 
-
-.hamburger-menu-btn {
-    transform: translateY(-45px);
-    place-self: end;
-    padding: .5rem;
-    transition: all 0.2s;
-    background: none;
-    border: none;
+/* Nav container (sticky) */
+.container__nav{
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(150%) blur(6px);
+  background: linear-gradient(180deg, var(--bg-cream), var(--bg-white));
+  border-bottom: 1px solid var(--bd);
 }
 
-
-.hamburger-menu-btn:hover {
-  background: rgba(148, 148, 148, 0.147);
+/* Top row */
+.title__nav{
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 16px;
 }
 
-
-/* SUPPLEMENTARY LINKS - hidden beneath kebab menu */
-
-.supple-links {
-  display: none;             
-  position: absolute; 
-  right: 1rem; 
-  top: 3.25rem;
-  background: #fff; 
-  border: 1px solid #eee; 
-  border-radius: .5rem;
-  padding: .5rem; 
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.108);
+/* Logo */
+.title-text{
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: .4px;
+  color: var(--ink);
+  font-size: clamp(18px, 2vw, 22px);
 }
 
-
-.supple-links a {
-  display: inline-flex; 
-  align-items: center; 
-  justify-content: center;
-  padding: .5rem; 
-  font-size: 1.25rem;
-  color: var(--primary);
-  transition: all 0.2s;
+/* Desktop links (hidden by default, shown >=768px) */
+.links__nav{
+  display: none;
+  gap: 18px;
+  margin-left: 18px;
+}
+.links__nav a{
+  text-decoration: none;
+  color: var(--muted);
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+.links__nav a:hover,
+.links__nav a:focus-visible{
+  color: var(--ink);
+  background: #ffe3ec5c; /* soft pink wash */
+  outline: none;
+  transform: translateY(-1px);
 }
 
-
-.supple-links a:hover {
-    background: var(--teritary);
-    color: var(--bg);
-    border-radius: 999px;
+/* Kebab button (mobile) */
+.hamburger-menu-btn{
+  margin-left: auto;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  background: var(--glass);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background .2s ease, transform .1s ease;
+}
+.hamburger-menu-btn:active{ transform: scale(.98); }
+.hamburger-menu-btn:focus-visible{
+  outline: 2px solid var(--pink);
+  outline-offset: 2px;
 }
 
-
-.supple-links.is-open { 
-    display: flex; 
-    gap: .25rem; 
+/* Supplementary icons dropdown (mobile) */
+.supple-links{
+  display: none;
+  position: absolute;
+  right: 16px; top: 60px;
+  background: var(--glass);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 8px;
+  gap: 6px;
+}
+.supple-links.is-open{ display: flex; }
+.supple-links a{
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  color: var(--ink);
+  transition: background .2s ease, transform .1s ease;
+  text-decoration: none;
+}
+.supple-links a:hover,
+.supple-links a:focus-visible{
+  background: #ffe3ec5c;
+  outline: none;
+  transform: translateY(-1px);
 }
 
-
-.links__nav a {
-    text-decoration: none;
-    color: var(--primary);
-}
-
-
-.links__nav a:hover {
-    color: var(--secondary);
-}
-
-
-.links__nav {
-    display: flex; display: none;
-    justify-content: center;
-    gap: 1rem;
-}
-
-
-.title__nav {
-    color: var(--primary);
-    display: flex; /* forces a flex layout */
-    place-items: center; /* centers items */
-    justify-content: space-between; /* substantial spacing */
-    gap: 2rem;
-    padding: .65rem 1rem; /* breathing room */
-}
-
-
-.title-text {
-    background: var(--secondary);
-    background-clip: none;
-    -webkit-background-clip: none;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
-    padding: .25rem;
-    width: 100%;
-    max-width: 75px;
-    border-radius: 10px;
-}
-
-
-@media (min-width: 768px) {
-    .links__nav { 
-        display: flex; 
-    }
-    .hamburger-menu-btn { 
-        display: none; 
-    }
-    .supple-links { 
-        display: none !important; 
-    }
+/* --- Desktop layout --- */
+@media (min-width: 768px){
+  .links__nav{ display: flex; }
+  .hamburger-menu-btn{ display: none; }
+  .supple-links{ display: none !important; }
 }

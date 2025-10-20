@@ -71,12 +71,12 @@ function ReviewSection() {
         <div className="testimonial-display">
           {reviews.map((review, index) => (
             <div key={index} className="testimonial-card">
-              <div className="testimonial-icon">
-                {review.icon}<span className="testimonial-rating">{review.rating}</span>
-              </div>
+              <span className="testimonial-rating" aria-label="Rated 4 out of 5 stars">
+                {[...Array(4)].map((_, i) => <IoMdStar key={i} />)}
+              </span>
               <h4 className="testimonial-quote">{review.quote}</h4>
               <small className="testimonial-item">{review.item}</small>
-              <hr style={{ border: "1px solid #dba1bb2c", background: "none" }} />
+              <div className="testimonial-divider" aria-hidden="true"></div>
               <small className="testimonial-author">{review.reviewer}</small>
               <small className="testimonial-locale">{review.locale}</small>
             </div>

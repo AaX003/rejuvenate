@@ -15,16 +15,16 @@ function FooterSection() {
 
           <ul className="social-links" aria-label="Social media">
             <li className="social-tag">
-              <a href="#" aria-label="Instagram"><FaInstagram /></a>
+              <a href="#!" aria-label="Instagram"><FaInstagram /></a>
             </li>
             <li className="social-tag">
-              <a href="#" aria-label="Facebook"><FaFacebook /></a>
+              <a href="#!" aria-label="Facebook"><FaFacebook /></a>
             </li>
             <li className="social-tag">
-              <a href="#" aria-label="X (formerly Twitter)"><FaX /></a>
+              <a href="#!" aria-label="X (formerly Twitter)"><FaX /></a>
             </li>
             <li className="social-tag">
-              <a href="#" aria-label="YouTube"><FaYoutube /></a>
+              <a href="#!" aria-label="YouTube"><FaYoutube /></a>
             </li>
           </ul>
         </div>
@@ -33,22 +33,22 @@ function FooterSection() {
           <nav className="main-content" aria-label="Footer navigation">
             <ul className="product-links">
               <li className="nav-links-title"><h3 className="nav-link-title">Products</h3></li>
-              <li className="nav-link"><a href="#products">Face Serums</a></li>
-              <li className="nav-link"><a href="#products">Moisturizers</a></li>
-              <li className="nav-link"><a href="#products">Cleansers</a></li>
-              <li className="nav-link"><a href="#products">Face Masks</a></li>
-              <li className="nav-link"><a href="#products">Gift Sets</a></li>
-              <li className="nav-link"><a href="#products">New Arrivals</a></li>
+              <li className="nav-link"><a href="#!">Face Serums</a></li>
+              <li className="nav-link"><a href="#!">Moisturizers</a></li>
+              <li className="nav-link"><a href="#!">Cleansers</a></li>
+              <li className="nav-link"><a href="#!">Face Masks</a></li>
+              <li className="nav-link"><a href="#!">Gift Sets</a></li>
+              <li className="nav-link"><a href="#!">New Arrivals</a></li>
             </ul>
 
             <ul className="support-links">
               <li className="nav-links-title"><h3 className="nav-link-title">Support</h3></li>
-              <li className="nav-link"><a href="#">Contact Us</a></li>
-              <li className="nav-link"><a href="#">Shipping Info</a></li>
-              <li className="nav-link"><a href="#">Returns & Exchanges</a></li>
-              <li className="nav-link"><a href="#">Size Guide</a></li>
-              <li className="nav-link"><a href="#">FAQ</a></li>
-              <li className="nav-link"><a href="#">Skin Quiz</a></li>
+              <li className="nav-link"><a href="#!">Contact Us</a></li>
+              <li className="nav-link"><a href="#!">Shipping Info</a></li>
+              <li className="nav-link"><a href="#!">Returns & Exchanges</a></li>
+              <li className="nav-link"><a href="#!">Size Guide</a></li>
+              <li className="nav-link"><a href="#!">FAQ</a></li>
+              <li className="nav-link"><a href="#!">Skin Quiz</a></li>
             </ul>
 
             <ul className="contact-links">
@@ -69,13 +69,13 @@ function FooterSection() {
               </figcaption>
             </figure>
           </nav>
-          <hr style={{ border: "1px solid #cacaca10", background: "none" }} />
+          <div className="footer-divider" aria-hidden="true" />
           <div className="add-content">
             <small className="rights-reserved-msg">© 2025 REJUV. All rights reserved.</small>
             <ul className="legal-links">
-              <li className="legal-link"><a href="#">Privacy Policy</a></li>
-              <li className="legal-link"><a href="#">Terms of Service</a></li>
-              <li className="legal-link"><a href="#">Cookie Policy</a></li>
+              <li className="legal-link"><a href="#!">Privacy Policy</a></li>
+              <li className="legal-link"><a href="#!">Terms of Service</a></li>
+              <li className="legal-link"><a href="#!">Cookie Policy</a></li>
             </ul>
           </div>
         </div>

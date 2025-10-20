@@ -83,22 +83,33 @@ function ProductSection() {
       </section>
       <section className="showcase__products">
         <div className="product-display">
-          {products.map((product, index) => (
-            <div key={index} className="product-card">
-              <img src={product.img} alt={product.img} width="300" height="300"/>
-              <h3 className="product-title">{product.title}</h3>
-              <small className="product-desc">{product.desc}</small>
-              <br />
-              <small className="product-rating">
-                <span className="product-icon">
-                  <IoMdStar />
+          {products.map((p, i) => (
+            <article key={i} className="product-card">
+              <img
+                src={p.img}
+                alt={p.title}
+                width="300"
+                height="300"
+                className="product-img"
+                loading="lazy"
+              />
+              <h3 className="product-title">{p.title}</h3>
+              <p className="product-desc">{p.desc}</p>
+
+              <div className="product-meta">
+                <span className="product-rating">
+                  <IoMdStar aria-hidden="true" />
+                  {p.rating}
                 </span>
-                {product.rating}
-              </small>
-              <br />
-              <small className="product-price" style={{ textDecoration: "4px solid #919191c4 line-through" }}>${product.price.toFixed(2)}</small>
-              <small className="product-nprice">${product.nprice.toFixed(2)}</small>
-            </div>
+              </div>
+
+              <div className="product-prices">
+                <span className="price-old">${p.price.toFixed(2)}</span>
+                <span className="price-new">${p.nprice.toFixed(2)}</span>
+              </div>
+
+              <button className="add-btn" type="button">Add to Cart</button>
+            </article>
           ))}
         </div>
         <div className="nav-btn-container">

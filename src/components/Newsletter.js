@@ -45,6 +45,7 @@ function NewsLetterSection() {
           placeholder="Enter your email address"
         />
         <a 
+          type="button"
           href="#form"
           className="subscribe-btn"
         >
@@ -55,7 +56,7 @@ function NewsLetterSection() {
           By subscribing, you agree to our Privacy Policy and Terms of Service. 
           Unsubscribe at any time.
       </figcaption>
-      <hr style={{ border: "1px solid #dba1bbf5", background: "none" }} />
+      <div className="newsletter-divider" aria-hidden="true"></div>
       <figcaption className="hint__newsletter">
         Join <span className="pink-text">85,000+</span> beauty enthusiasts already getting glowing skin tips
       </figcaption>
