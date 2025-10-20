@@ -30,13 +30,15 @@
 }
 
 .hero__about .hero {
-  display: grid;
-  place-items: center;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-self: center;
   padding: clamp(8px, 2vw, 16px);
 }
 
 .title__about {
+  text-align: center;
   margin: 0 0 8px;
   font-size: clamp(24px, 4vw, 40px);
   line-height: 1.1;
@@ -44,6 +46,7 @@
 }
 
 .subtitle__about {
+  text-align: center;
   margin: 0 auto;
   max-width: 62ch;
   color: var(--muted);

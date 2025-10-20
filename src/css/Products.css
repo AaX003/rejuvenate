@@ -28,9 +28,10 @@
 }
 
 .hero__products .hero {
-  display: grid;
-  place-items: center;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-self: center;
   padding: clamp(8px, 2vw, 16px);
 }
 
