@@ -41,6 +41,7 @@ function NewsLetterSection() {
       </section>
       <section className="input-container">
         <input
+          id="nl-email"
           type="email"
           placeholder="Enter your email address"
         />
