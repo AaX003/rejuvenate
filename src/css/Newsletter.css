@@ -22,7 +22,7 @@
   font-family: ui-sans-serif, system-ui, "Poppins", "Inter", Arial, sans-serif;
   text-align: center;
   padding: 2.4rem;
-  max-width: 2400px;
+  max-width: 2800px;
   margin: 0 auto;
 }
 
@@ -47,8 +47,9 @@
 /* Perks row */
 .stats__newsletter {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  place-self: center;
   gap: clamp(10px, 2vw, 20px);
   margin: clamp(18px, 3vw, 30px) auto 0;
   padding: 0;
@@ -60,7 +61,7 @@
   align-items: center;
   gap: 8px;
   background: #fff;
-  border: 1px solid var(--bd);
+  border: 1px solid var(--pink);
   border-radius: 999px;
   padding: 10px 16px;
   font-weight: 600;
@@ -81,8 +82,9 @@
 /* Input + button */
 .input-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  place-self: center;
   gap: 10px;
   margin-top: clamp(16px, 3vw, 24px);
 }
