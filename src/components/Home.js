@@ -21,7 +21,7 @@ function HomeSection() {
             </header>
             <div className="cta-btns-container">
                 <a
-                    href="#form"
+                    href="#!"
                     className="shop-now-btn"
                 >
                     Shop Now 

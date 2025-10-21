@@ -148,6 +148,13 @@
 }
 
 /* Responsive */
+@media (min-width: 320px ){
+  .input-container {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
 @media (min-width: 344px) {
   .input-container {
     display: flex;

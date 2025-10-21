@@ -14,11 +14,27 @@ function Main() {
     <div className="container__main">
       <main className="components">
         <NavSection />
-        <HomeSection/>
-        <ProductSection/>
-        <AboutSection />
-        <ReviewSection />
-        <NewsLetterSection />
+
+        <section id="home">
+          <HomeSection />
+        </section>
+
+        <section id="products">
+          <ProductSection />
+        </section>
+
+        <section id="about">
+          <AboutSection />
+        </section>
+
+        <section id="reviews">
+          <ReviewSection />
+        </section>
+
+        <section id="newsletter">
+          <NewsLetterSection />
+        </section>
+
         <FooterSection />
       </main>
     </div>
